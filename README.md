@@ -2,7 +2,7 @@
 
 EduPlay: latihan matematika kelas 1–3 SD lewat permainan sepuluh menit yang berhenti sendiri. Tanpa iklan, tanpa chat, bisa tanpa internet. Coba Teman Sepuluh dan Timbangan di peramban.
 
-**Demo live:** https://landing-eduplay.vercel.app
+**Demo live:** https://landing-eduplay.pintuweb.id
 
 ![Tangkapan layar EduPlay](public/og.jpg)
 

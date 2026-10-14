@@ -5,10 +5,10 @@ import "./globals.css";
 const baloo = Baloo_2({ variable: "--font-baloo", subsets: ["latin"], weight: ["500", "600", "700", "800"] });
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"SoftwareApplication","applicationCategory":"EducationalApplication","operatingSystem":"Android, iPadOS, Web","name":"EduPlay","description":"Latihan matematika SD kelas 1–3 lewat permainan sepuluh menit","url":"https://landing-eduplay.vercel.app","inLanguage":"id"};
+const __jsonld = {"@context":"https://schema.org","@type":"SoftwareApplication","applicationCategory":"EducationalApplication","operatingSystem":"Android, iPadOS, Web","name":"EduPlay","description":"Latihan matematika SD kelas 1–3 lewat permainan sepuluh menit","url":"https://landing-eduplay.pintuweb.id","inLanguage":"id"};
 
 export const metadata = {
-  metadataBase: new URL("https://landing-eduplay.vercel.app"),
+  metadataBase: new URL("https://landing-eduplay.pintuweb.id"),
   title: { default: "EduPlay — Matematika SD, Sepuluh Menit Sehari", template: "%s — EduPlay" },
   description: "EduPlay: latihan matematika kelas 1–3 SD lewat permainan sepuluh menit yang berhenti sendiri. Tanpa iklan, tanpa chat, bisa tanpa internet. Coba Teman Sepuluh dan Timbangan di peramban.",
   applicationName: "EduPlay",
@@ -16,11 +16,11 @@ export const metadata = {
   authors: [{ name: "EduPlay" }],
   creator: "EduPlay",
   publisher: "EduPlay",
-  alternates: { canonical: "https://landing-eduplay.vercel.app" },
+  alternates: { canonical: "https://landing-eduplay.pintuweb.id" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://landing-eduplay.vercel.app",
+    url: "https://landing-eduplay.pintuweb.id",
     siteName: "EduPlay",
     title: "EduPlay — Matematika SD, Sepuluh Menit Sehari",
     description: "EduPlay: latihan matematika kelas 1–3 SD lewat permainan sepuluh menit yang berhenti sendiri. Tanpa iklan, tanpa chat, bisa tanpa internet. Coba Teman Sepuluh dan Timbangan di peramban.",

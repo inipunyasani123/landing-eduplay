@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import { FAQ as DAFTAR, HARGA, KELAS, LAPORAN, PRINSIP, PULAU, rp } from '@/lib/eduplay';
+import { FAQ as DAFTAR, HARGA, LAPORAN, PRINSIP, rp } from '@/lib/eduplay';
 import TemanSepuluh from './TemanSepuluh';
+import PetaPulau from './PetaPulau';
 
 export function Hero() {
   return (
-    <section className="confetti-dots px-6 pt-28 pb-20 md:pt-36 md:pb-28">
+    <section className="confetti-dots px-6 pt-24 pb-12 md:pt-36 md:pb-20">
       <div className="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
         <div>
           <p className="neu-raised inline-flex rounded-full px-4 py-2 text-sm font-semibold text-brand-ink">Untuk kelas 1–3 SD</p>
@@ -42,7 +43,7 @@ export function Hero() {
 
 export function MainSatu() {
   return (
-    <section id="main" className="scroll-mt-20 px-6 py-20 md:py-28">
+    <section id="main" className="scroll-mt-20 px-6 py-14 md:py-24">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
         <div>
           <p className="text-sm font-bold text-brand-ink">Coba sekarang · tanpa unduh</p>
@@ -58,29 +59,18 @@ export function MainSatu() {
 
 export function PulauTeaser() {
   return (
-    <section className="px-6 py-20 md:py-28">
+    <section id="peta" className="scroll-mt-20 px-6 py-14 md:py-24">
       <div className="mx-auto max-w-6xl">
-        <p className="text-sm font-bold text-brand-ink">Kurikulum</p>
-        <h2 className="mt-3 max-w-2xl text-[2.4rem] leading-[1.05] font-extrabold text-ink md:text-5xl">Dua belas pulau, empat untuk tiap kelas</h2>
-        <ul className="mt-12 grid gap-8 md:grid-cols-3">
-          {KELAS.map((k) => (
-            <li key={k.no} className="neu-raised rounded-[2rem] p-7">
-              <p className="flex items-baseline justify-between">
-                <span className="font-[family-name:var(--font-baloo)] text-3xl font-extrabold text-ink">Kelas {k.no}</span>
-                <span className="text-sm font-semibold">{k.fase}</span>
-              </p>
-              <ul className="mt-5 space-y-3">
-                {PULAU.filter((p) => p.kelas === k.no).map((p) => (
-                  <li key={p.slug} className="neu-sunken rounded-2xl px-4 py-3">
-                    <span className="block font-semibold text-ink">{p.nama}</span>
-                    <span className="text-sm">{p.topik}</span>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-        <Link href="/kurikulum" className="neu-raised mt-10 inline-flex rounded-full px-7 py-4 font-semibold text-ink hover:text-brand-ink">Lihat contoh soal tiap pulau</Link>
+        <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div>
+            <p className="text-sm font-bold text-brand-ink">Peta kurikulum</p>
+            <h2 className="mt-3 max-w-2xl text-[2.4rem] leading-[1.05] font-extrabold text-ink md:text-5xl">Dua belas pulau, empat untuk tiap kelas</h2>
+          </div>
+          <Link href="/kurikulum" className="neu-raised inline-flex shrink-0 self-start rounded-full px-6 py-3.5 font-semibold text-ink hover:text-brand-ink md:self-auto">Lihat contoh soal tiap pulau</Link>
+        </div>
+        <div className="mt-8 md:mt-10">
+          <PetaPulau />
+        </div>
       </div>
     </section>
   );
@@ -90,14 +80,14 @@ export function OrangTua() {
   const maks = Math.max(...LAPORAN.menit.map(([, m]) => m), LAPORAN.batas);
   const total = LAPORAN.menit.reduce((s, [, m]) => s + m, 0);
   return (
-    <section id="orang-tua" className="scroll-mt-20 px-6 py-20 md:py-28">
-      <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <section id="orang-tua" className="scroll-mt-20 px-6 py-14 md:py-24">
+      <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12">
         <div>
           <p className="text-sm font-bold text-brand-ink">Untuk orang tua</p>
           <h2 className="mt-3 text-[2.4rem] leading-[1.05] font-extrabold text-ink md:text-5xl">Anda yang memegang jam pasirnya</h2>
-          <ul className="mt-10 space-y-5">
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-1 lg:gap-5 md:mt-10">
             {PRINSIP.map(([j, d]) => (
-              <li key={j} className="neu-raised rounded-3xl p-6">
+              <li key={j} className="neu-raised rounded-3xl p-5 md:p-6">
                 <h3 className="text-xl font-bold text-ink">{j}</h3>
                 <p className="mt-1 leading-relaxed">{d}</p>
               </li>
@@ -138,17 +128,17 @@ export function OrangTua() {
 
 export function Harga() {
   return (
-    <section id="harga" className="scroll-mt-20 px-6 py-20 md:py-28">
+    <section id="harga" className="scroll-mt-20 px-6 py-14 md:py-24">
       <div className="mx-auto max-w-6xl">
         <p className="text-sm font-bold text-brand-ink">Harga</p>
         <h2 className="mt-3 max-w-2xl text-[2.4rem] leading-[1.05] font-extrabold text-ink md:text-5xl">Mulai gratis, berlangganan bila anak suka</h2>
-        <ul className="mt-12 grid gap-8 md:grid-cols-3">
+        <ul className="mt-8 grid gap-5 md:mt-12 md:grid-cols-3 md:gap-8">
           {HARGA.map((h) => (
-            <li key={h.nama} className={`flex flex-col rounded-[2rem] p-7 ${h.unggul ? 'neu-sunken ring-2 ring-brand-ink' : 'neu-raised'}`}>
+            <li key={h.nama} className={`flex flex-col rounded-[2rem] p-6 md:p-7 ${h.unggul ? 'neu-sunken ring-2 ring-brand-ink' : 'neu-raised'}`}>
               <h3 className="text-2xl font-extrabold text-ink">{h.nama}</h3>
               <p className="mt-4 font-[family-name:var(--font-baloo)] text-4xl font-extrabold text-ink">{h.harga ? rp(h.harga) : 'Gratis'}</p>
               <p className="text-sm">{h.satuan}{h.catatan ? ` · ${h.catatan}` : ''}</p>
-              <ul className="mt-6 mb-8 space-y-2.5">
+              <ul className="mt-5 mb-7 space-y-2 md:mt-6 md:mb-8 md:space-y-2.5">
                 {h.isi.map((i) => <li key={i} className="flex gap-2.5"><span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand-ink" />{i}</li>)}
               </ul>
               <Link href={h.cta[1]} className={`mt-auto block rounded-full py-3.5 text-center font-semibold ${h.unggul ? 'bg-brand-ink text-white hover:bg-ink' : 'neu-raised text-ink hover:text-brand-ink'}`}>{h.cta[0]}</Link>
@@ -163,10 +153,10 @@ export function Harga() {
 
 export function FAQ() {
   return (
-    <section id="faq" className="scroll-mt-20 px-6 py-20 md:py-28">
+    <section id="faq" className="scroll-mt-20 px-6 py-14 md:py-24">
       <div className="mx-auto max-w-3xl">
         <h2 className="text-center text-[2.4rem] leading-[1.05] font-extrabold text-ink md:text-5xl">Pertanyaan orang tua</h2>
-        <div className="mt-10 space-y-4">
+        <div className="mt-8 space-y-3 md:mt-10 md:space-y-4">
           {DAFTAR.map((f) => (
             <details key={f.t} className="group neu-raised rounded-3xl px-6 open:neu-sunken">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-lg font-bold text-ink [&::-webkit-details-marker]:hidden">

@@ -29,7 +29,7 @@ export default function Kurikulum() {
             </div>
             <ol className="mt-8 grid gap-6 md:grid-cols-2">
               {PULAU.filter((p) => p.kelas === k.no).map((p, i) => (
-                <li key={p.slug} className="neu-raised flex flex-col rounded-[2rem] p-7">
+                <li key={p.slug} id={p.slug} className="neu-raised flex scroll-mt-24 flex-col rounded-[2rem] p-6 target:ring-2 target:ring-brand-ink md:p-7">
                   <p className="flex items-center justify-between gap-4">
                     <span className="neu-sunken grid h-11 w-11 place-items-center rounded-full font-[family-name:var(--font-baloo)] text-xl font-extrabold text-brand-ink">{i + 1}</span>
                     <span className="text-sm font-semibold">Permainan: {p.main}</span>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { KELAS, PULAU } from '@/lib/eduplay';
 
@@ -43,12 +44,13 @@ export default function PetaPulau() {
                       >
                         <span className="flex items-center justify-between gap-2">
                           <span className="neu-sunken grid h-7 w-7 shrink-0 place-items-center rounded-full font-[family-name:var(--font-baloo)] text-sm font-extrabold text-brand-ink">{nomor}</span>
-                          {BISA_DICOBA.has(p.slug) && <span className="rounded-full bg-brand-ink px-2 py-0.5 text-[0.65rem] font-bold text-white">bisa dicoba</span>}
+                          <Image src={`/images/pulau/${p.slug}.webp`} alt="" width={40} height={40} className="h-9 w-9 shrink-0 sm:h-10 sm:w-10" />
                         </span>
                         <span className="mt-2 block font-[family-name:var(--font-baloo)] text-lg leading-tight font-extrabold text-ink group-hover:text-brand-ink">
                           {p.nama.replace(/^Pulau /, '')}
                         </span>
                         <span className="block text-xs leading-snug">{p.main}</span>
+                        {BISA_DICOBA.has(p.slug) && <span className="mt-1.5 self-start rounded-full bg-brand-ink px-2 py-0.5 text-[0.65rem] font-bold text-white">bisa dicoba</span>}
                       </Link>
                     </li>
                   );

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { KELAS, PULAU, SITE } from '@/lib/eduplay';
 
 export const metadata = {
@@ -34,8 +35,13 @@ export default function Kurikulum() {
                     <span className="neu-sunken grid h-11 w-11 place-items-center rounded-full font-[family-name:var(--font-baloo)] text-xl font-extrabold text-brand-ink">{i + 1}</span>
                     <span className="text-sm font-semibold">Permainan: {p.main}</span>
                   </p>
-                  <h3 className="mt-5 text-2xl font-extrabold text-ink">{p.nama}</h3>
-                  <p className="mt-1 leading-relaxed">{p.topik}</p>
+                  <div className="mt-5 flex items-start justify-between gap-4">
+                    <div>
+                      <h3 className="text-2xl font-extrabold text-ink">{p.nama}</h3>
+                      <p className="mt-1 leading-relaxed">{p.topik}</p>
+                    </div>
+                    <Image src={`/images/pulau/${p.slug}.webp`} alt="" width={88} height={88} className="-mt-3 h-[4.5rem] w-[4.5rem] shrink-0 sm:h-[5.5rem] sm:w-[5.5rem]" />
+                  </div>
                   <p className="neu-sunken mt-5 rounded-2xl px-5 py-4 font-[family-name:var(--font-baloo)] text-lg font-semibold text-ink">
                     <span className="block text-xs font-bold tracking-wide text-ink-2 uppercase">Contoh soal</span>
                     {p.soal}

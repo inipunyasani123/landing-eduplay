@@ -49,7 +49,7 @@ export function MainSatu() {
           <p className="text-sm font-bold text-brand-ink">Coba sekarang · tanpa unduh</p>
           <h2 className="mt-3 text-[2.4rem] leading-[1.05] font-extrabold text-ink md:text-5xl">Satu ronde Teman Sepuluh</h2>
           <p className="mt-5 max-w-md text-lg leading-relaxed">Pasangkan dua ubin yang jumlahnya sepuluh. Permainan ini dari Pulau Teman Sepuluh, kelas 1 — dasar untuk menjumlah lewat sepuluh di kelas 2.</p>
-          <Link href="/main" className="mt-6 inline-block text-sm font-bold text-brand-ink underline underline-offset-4 hover:text-ink">Coba juga permainan Timbangan →</Link>
+          <Link href="/main" className="mt-3 inline-block py-3 text-sm font-bold text-brand-ink underline underline-offset-4 hover:text-ink">Coba juga permainan Timbangan →</Link>
         </div>
         <TemanSepuluh />
       </div>

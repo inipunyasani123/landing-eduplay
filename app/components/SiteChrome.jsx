@@ -5,12 +5,12 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 bg-surface/90 shadow-[0_6px_14px_-10px_var(--color-shade)] backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-6">
-        <Link href="/" className="flex items-center gap-2 font-[family-name:var(--font-baloo)] text-xl font-extrabold text-ink sm:gap-2.5 sm:text-2xl">
+        <Link href="/" className="flex min-h-11 items-center gap-2 font-[family-name:var(--font-baloo)] text-xl font-extrabold text-ink sm:gap-2.5 sm:text-2xl">
           <span aria-hidden="true" className="neu-raised grid h-9 w-9 place-items-center rounded-xl text-base text-brand-ink">10</span>
           EduPlay
         </Link>
         <Navigasi>
-          <Link href="/main" className="inline-flex h-10 items-center rounded-full bg-brand-ink px-4 text-sm font-semibold whitespace-nowrap text-white hover:bg-ink sm:px-5">Coba main</Link>
+          <Link href="/main" className="inline-flex h-11 items-center rounded-full bg-brand-ink px-4 text-sm font-semibold whitespace-nowrap text-white hover:bg-ink sm:px-5">Coba main</Link>
         </Navigasi>
       </div>
     </header>
@@ -28,17 +28,17 @@ export function SiteFooter() {
           </div>
           <nav aria-label="Aplikasi">
             <p className="mb-3 text-sm font-bold text-ink">Aplikasi</p>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/main" className="hover:text-ink">Coba main di peramban</Link></li>
-              <li><Link href="/kurikulum" className="hover:text-ink">12 pulau kurikulum</Link></li>
-              <li><Link href="/#harga" className="hover:text-ink">Harga</Link></li>
+            <ul className="space-y-0.5 text-sm">
+              <li><Link href="/main" className="inline-block py-3 hover:text-ink">Coba main di peramban</Link></li>
+              <li><Link href="/kurikulum" className="inline-block py-3 hover:text-ink">12 pulau kurikulum</Link></li>
+              <li><Link href="/#harga" className="inline-block py-3 hover:text-ink">Harga</Link></li>
             </ul>
           </nav>
           <nav aria-label="Orang tua dan guru">
             <p className="mb-3 text-sm font-bold text-ink">Orang tua & guru</p>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/#orang-tua" className="hover:text-ink">Laporan & batas waktu</Link></li>
-              <li><Link href="/#faq" className="hover:text-ink">Pertanyaan umum</Link></li>
+            <ul className="space-y-0.5 text-sm">
+              <li><Link href="/#orang-tua" className="inline-block py-3 hover:text-ink">Laporan & batas waktu</Link></li>
+              <li><Link href="/#faq" className="inline-block py-3 hover:text-ink">Pertanyaan umum</Link></li>
             </ul>
           </nav>
         </div>

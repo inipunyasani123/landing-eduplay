@@ -46,7 +46,7 @@ export default function Kurikulum() {
                     <span className="block text-xs font-bold tracking-wide text-ink-2 uppercase">Contoh soal</span>
                     {p.soal}
                   </p>
-                  {BISA_DICOBA[p.slug] && <Link href="/main" className="mt-5 self-start text-sm font-bold text-brand-ink underline underline-offset-4 hover:text-ink">Coba main di peramban →</Link>}
+                  {BISA_DICOBA[p.slug] && <Link href="/main" className="mt-2 self-start py-3 text-sm font-bold text-brand-ink underline underline-offset-4 hover:text-ink">Coba main di peramban →</Link>}
                 </li>
               ))}
             </ol>

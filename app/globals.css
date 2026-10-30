@@ -89,3 +89,5 @@ h3 {
   outline: 2px solid var(--color-brand-ink);
   outline-offset: 3px;
 }
+
+html { scroll-padding-top: 5rem; }

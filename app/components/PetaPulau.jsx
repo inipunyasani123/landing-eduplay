@@ -50,7 +50,7 @@ export default function PetaPulau() {
                           {p.nama.replace(/^Pulau /, '')}
                         </span>
                         <span className="block text-xs leading-snug">{p.main}</span>
-                        {BISA_DICOBA.has(p.slug) && <span className="mt-1.5 self-start rounded-full bg-brand-ink px-2 py-0.5 text-[0.65rem] font-bold text-white">bisa dicoba</span>}
+                        {BISA_DICOBA.has(p.slug) && <span className="mt-1.5 self-start rounded-full bg-brand-ink px-2 py-0.5 text-xs font-bold text-white">bisa dicoba</span>}
                       </Link>
                     </li>
                   );
